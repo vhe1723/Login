@@ -82,6 +82,7 @@ public class HomeController {
     public String homeLoginV3Spring(@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false)Member loginMember, Model model) {
         //@SessionAttribute => 세션을 받아와 Member객체에 넣어준다.
 
+        log.info("Call Controller");
         //세션에 회원 데이터가 없으면 home
         if (loginMember == null) {
             return "home";
